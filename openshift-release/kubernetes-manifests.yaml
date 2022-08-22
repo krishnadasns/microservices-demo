@@ -30,6 +30,8 @@ spec:
     metadata:
       labels:
         app: emailservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       terminationGracePeriodSeconds: 5
@@ -98,6 +100,8 @@ spec:
     metadata:
       labels:
         app: checkoutservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       securityContext:
@@ -179,6 +183,8 @@ spec:
     metadata:
       labels:
         app: recommendationservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       terminationGracePeriodSeconds: 5
@@ -253,6 +259,7 @@ spec:
         app: frontend
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       securityContext:
@@ -363,6 +370,8 @@ spec:
     metadata:
       labels:
         app: paymentservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       terminationGracePeriodSeconds: 5
@@ -431,6 +440,8 @@ spec:
     metadata:
       labels:
         app: productcatalogservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       terminationGracePeriodSeconds: 5
@@ -501,6 +512,8 @@ spec:
     metadata:
       labels:
         app: cartservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       terminationGracePeriodSeconds: 5
@@ -569,6 +582,7 @@ spec:
         app: loadgenerator
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       terminationGracePeriodSeconds: 5
@@ -698,6 +712,8 @@ spec:
     metadata:
       labels:
         app: shippingservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       securityContext:
@@ -768,6 +784,8 @@ spec:
     metadata:
       labels:
         app: redis-cart
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       securityContext:
@@ -834,6 +852,8 @@ spec:
     metadata:
       labels:
         app: adservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: micro
       terminationGracePeriodSeconds: 5
